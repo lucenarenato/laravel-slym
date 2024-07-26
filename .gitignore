@@ -9,3 +9,5 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+docker/logs/nginx/laravel_access.log
+docker/logs/nginx/laravel_error.log
