@@ -42,7 +42,7 @@
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="shortcut icon" href="/../../imgs/slym.png" />
-	
+
 	<script>
 		(function(h, o, t, j, a, r) {
 			h.hj = h.hj || function() {
@@ -68,7 +68,7 @@
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-		gtag('config', 'UA-37564768-1');
+		gtag('config', 'UA-109029815-1');
 	</script>
 
 

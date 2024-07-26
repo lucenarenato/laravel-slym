@@ -41,7 +41,7 @@
 
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	
+
 	<script>
 		(function(h, o, t, j, a, r) {
 			h.hj = h.hj || function() {
@@ -59,7 +59,7 @@
 		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-37564768-1"></script>
+	<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-109029815-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -67,7 +67,7 @@
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-		gtag('config', 'UA-37564768-1');
+		gtag('config', 'UA-109029815-1');
 	</script>
 
 
@@ -150,17 +150,17 @@
 	<input type="hidden" id="categorias" value="{{json_encode($categorias)}}" name="">
 	<input type="hidden" id="clientes" value="{{json_encode($clientes)}}" name="">
 	<input type="hidden" id="agendamento_id" value="{{$agendamento_id ?? 0}}" name="">
-	
+
 	<input type="hidden" id="_token" value="{{ csrf_token() }}">
 
 	<input type="hidden" id="valor_entrega" @if(isset($valor_entrega)) value="{{$valor_entrega}}" @else value='0' @endif>
-	
+
 	@if(isset($itens))
 	<input type="hidden" id="itens_pedido" value="{{json_encode($itens)}}">
 	<input type="hidden" id="valor_total" @if(isset($valor_total)) value="{{$valor_total}}" @else value='0' @endif>
 	<input type="hidden" id="delivery_id" @if(isset($delivery_id)) value="{{$delivery_id}}" @else value='0' @endif>
 	<input type="hidden" id="bairro" @if(isset($bairro)) value="{{$bairro}}" @else value='0' @endif>
-	
+
 	<input type="hidden" id="codigo_comanda_hidden" @if(isset($cod_comanda)) value="{{$cod_comanda}}" @else value='0' @endif name="">
 	@endif
 
@@ -476,7 +476,7 @@
 										<select class="custom-select form-control" id="tipo-pagamento" name="tipo-pagamento">
 											<option value="--">Selecione o Tipo de pagamento</option>
 											@foreach($tiposPagamento as $key => $t)
-											<option 
+											<option
 											@if($config->tipo_pagamento_padrao == $key)
 											selected
 											@endif
@@ -501,7 +501,7 @@
 									</button>
 								</div>
 
-								
+
 
 								<div class="form-group validated col-sm-6 col-lg-2 col-12 col-md-12">
 
@@ -645,7 +645,7 @@
 									CUPOM FISCAL
 								</button>
 							</div>
-							
+
 							<div class="form-group validated col-sm-4 col-lg-4 col-12">
 								<button class="btn btn-info" id="btn_nao_fiscal" onclick="finalizarVenda('nao_fiscal')" style="height: 50px; width: 100%">
 									CUPOM NÃO FISCAL
@@ -816,7 +816,7 @@
 							</div>
 
 							<div class="col-sm-12 col-lg-12 col-12">
-								<h5>Total em caixa: 
+								<h5>Total em caixa:
 									<strong id="total_caixa" class="text-success"></strong></h5>
 								</div>
 							</div>
@@ -847,7 +847,7 @@
 
 								<div class="row 50_reais" style="display: none">
 									<div class="col-sm-3 col-lg-3 col-3">
-										<img class="money-cel" src="/imgs/50_reais.jpeg"> 
+										<img class="money-cel" src="/imgs/50_reais.jpeg">
 									</div>
 									<div class="col-sm-3 col-lg-3 col-3">
 										<h4 id="qtd_50_reais"></h4>
@@ -855,7 +855,7 @@
 								</div>
 								<div class="row 20_reais" style="display: none">
 									<div class="col-sm-3 col-lg-3 col-3">
-										<img class="money-cel" src="/imgs/20_reais.jpeg"> 
+										<img class="money-cel" src="/imgs/20_reais.jpeg">
 									</div>
 									<div class="col-sm-3 col-lg-3 col-3">
 										<h4 id="qtd_20_reais"></h4>
@@ -864,7 +864,7 @@
 
 								<div class="row 10_reais" style="display: none">
 									<div class="col-sm-3 col-lg-3 col-3">
-										<img class="money-cel" src="/imgs/10_reais.jpeg"> 
+										<img class="money-cel" src="/imgs/10_reais.jpeg">
 									</div>
 									<div class="col-sm-3 col-lg-3 col-3">
 										<h4 id="qtd_10_reais"></h4>
@@ -873,7 +873,7 @@
 
 								<div class="row 5_reais" style="display: none">
 									<div class="col-sm-3 col-lg-3 col-3">
-										<img class="money-cel" src="/imgs/5_reais.jpeg"> 
+										<img class="money-cel" src="/imgs/5_reais.jpeg">
 									</div>
 									<div class="col-sm-3 col-lg-3 col-3">
 										<h4 id="qtd_5_reais"></h4>
@@ -883,7 +883,7 @@
 								<div class="row 2_reais" style="display: none">
 
 									<div class="col-sm-3 col-lg-3 col-3">
-										<img class="money-cel" src="/imgs/2_reais.jpeg"> 
+										<img class="money-cel" src="/imgs/2_reais.jpeg">
 									</div>
 									<div class="col-sm-3 col-lg-3 col-3">
 										<h4 id="qtd_2_reais"></h4>
@@ -892,7 +892,7 @@
 
 								<div class="row 1_real" style="display: none">
 									<div class="col-sm-3 col-lg-3 col-3">
-										<img class="money-moeda" src="/imgs/1_real.png"> 
+										<img class="money-moeda" src="/imgs/1_real.png">
 									</div>
 									<div class="col-sm-3 col-lg-3 col-3">
 										<h4 id="qtd_1_real"></h4>
@@ -901,7 +901,7 @@
 
 								<div class="row 50_centavo" style="display: none">
 									<div class="col-sm-3 col-lg-3 col-3">
-										<img class="money-moeda" src="/imgs/50_centavo.png"> 
+										<img class="money-moeda" src="/imgs/50_centavo.png">
 									</div>
 									<div class="col-sm-3 col-lg-3 col-3">
 										<h4 id="qtd_50_centavos"></h4>
@@ -910,7 +910,7 @@
 
 								<div class="row 25_centavo" style="display: none">
 									<div class="col-sm-3 col-lg-3 col-3">
-										<img class="money-moeda" src="/imgs/25_centavo.png"> 
+										<img class="money-moeda" src="/imgs/25_centavo.png">
 									</div>
 									<div class="col-sm-3 col-lg-3 col-3">
 										<h4 id="qtd_25_centavos"></h4>
@@ -919,7 +919,7 @@
 
 								<div class="row 10_centavo" style="display: none">
 									<div class="col-sm-3 col-lg-3 col-3">
-										<img class="money-moeda" src="/imgs/10_centavo.png"> 
+										<img class="money-moeda" src="/imgs/10_centavo.png">
 									</div>
 									<div class="col-sm-3 col-lg-3 col-3">
 										<h4 id="qtd_10_centavos"></h4>
@@ -929,7 +929,7 @@
 
 								<div class="row 5_centavo" style="display: none">
 									<div class="col-sm-3 col-lg-3 col-3">
-										<img class="money-moeda" src="/imgs/5_centavo.png"> 
+										<img class="money-moeda" src="/imgs/5_centavo.png">
 									</div>
 									<div class="col-sm-3 col-lg-3 col-3">
 										<h4 id="qtd_5_centavos"></h4>
@@ -953,7 +953,7 @@
 					<h5>Sugestão:</h5>
 					<div class="row 50_reais" style="display: none">
 						<div class="col s3">
-							<img class="money-cel" src="/imgs/50_reais.jpeg"> 
+							<img class="money-cel" src="/imgs/50_reais.jpeg">
 						</div>
 						<div class="col s3">
 							<h4 id="qtd_50_reais"></h4>
@@ -961,7 +961,7 @@
 					</div>
 					<div class="row 20_reais" style="display: none">
 						<div class="col s3">
-							<img class="money-cel" src="/imgs/20_reais.jpeg"> 
+							<img class="money-cel" src="/imgs/20_reais.jpeg">
 						</div>
 						<div class="col s3">
 							<h4 id="qtd_20_reais"></h4>
@@ -970,7 +970,7 @@
 
 					<div class="row 10_reais" style="display: none">
 						<div class="col s3">
-							<img class="money-cel" src="/imgs/10_reais.jpeg"> 
+							<img class="money-cel" src="/imgs/10_reais.jpeg">
 						</div>
 						<div class="col s3">
 							<h4 id="qtd_10_reais"></h4>
@@ -979,7 +979,7 @@
 
 					<div class="row 5_reais" style="display: none">
 						<div class="col s3">
-							<img class="money-cel" src="/imgs/5_reais.jpeg"> 
+							<img class="money-cel" src="/imgs/5_reais.jpeg">
 						</div>
 						<div class="col s3">
 							<h4 id="qtd_5_reais"></h4>
@@ -988,7 +988,7 @@
 
 					<div class="row 2_reais" style="display: none">
 						<div class="col s3">
-							<img class="money-cel" src="/imgs/2_reais.jpeg"> 
+							<img class="money-cel" src="/imgs/2_reais.jpeg">
 						</div>
 						<div class="col s3">
 							<h4 id="qtd_2_reais"></h4>
@@ -997,7 +997,7 @@
 
 					<div class="row 1_real" style="display: none">
 						<div class="col s3">
-							<img class="money-moeda" src="/imgs/1_real.png"> 
+							<img class="money-moeda" src="/imgs/1_real.png">
 						</div>
 						<div class="col s3">
 							<h4 id="qtd_1_real"></h4>
@@ -1006,7 +1006,7 @@
 
 					<div class="row 50_centavo" style="display: none">
 						<div class="col s3">
-							<img class="money-moeda" src="/imgs/50_centavo.png"> 
+							<img class="money-moeda" src="/imgs/50_centavo.png">
 						</div>
 						<div class="col s3">
 							<h4 id="qtd_50_centavos"></h4>
@@ -1015,7 +1015,7 @@
 
 					<div class="row 25_centavo" style="display: none">
 						<div class="col s3">
-							<img class="money-moeda" src="/imgs/25_centavo.png"> 
+							<img class="money-moeda" src="/imgs/25_centavo.png">
 						</div>
 						<div class="col s3">
 							<h4 id="qtd_25_centavos"></h4>
@@ -1024,7 +1024,7 @@
 
 					<div class="row 10_centavo" style="display: none">
 						<div class="col s3">
-							<img class="money-moeda" src="/imgs/10_centavo.png"> 
+							<img class="money-moeda" src="/imgs/10_centavo.png">
 						</div>
 						<div class="col s3">
 							<h4 id="qtd_10_centavos"></h4>
@@ -1034,7 +1034,7 @@
 
 					<div class="row 5_centavo" style="display: none">
 						<div class="col s3">
-							<img class="money-moeda" src="/imgs/5_centavo.png"> 
+							<img class="money-moeda" src="/imgs/5_centavo.png">
 						</div>
 						<div class="col s3">
 							<h4 id="qtd_5_centavos"></h4>

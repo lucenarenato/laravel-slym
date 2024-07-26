@@ -10,6 +10,7 @@ use App\CategoriaConta;
 use App\Plano;
 use App\PlanoEmpresa;
 use App\Helpers\Menu;
+use Log;
 
 class UserController extends Controller
 {
@@ -21,13 +22,15 @@ class UserController extends Controller
   public function request(Request $request){
     $login = $request->input('login');
     $senha = $request->input('senha');
-
+    Log::debug($senha);
     $user = new Usuario();
 
     $usr = $user
     ->where('login', $login)
     ->where('senha', md5($senha))
     ->first();
+
+    Log::debug(json_encode($usr));
 
     if($usr != null){
 
@@ -63,7 +66,7 @@ class UserController extends Controller
       ->first();
       $ambiente = 'Não configurado';
       if($config != null){
-        $ambiente = $config->ambiente == 1 ? 'Produção' : 'Homologação'; 
+        $ambiente = $config->ambiente == 1 ? 'Produção' : 'Homologação';
       }
 
       $session = [
@@ -151,7 +154,7 @@ class UserController extends Controller
     $empresa = Empresa::create($data);
 
     $data = [
-      'nome' => $request->login, 
+      'nome' => $request->login,
       'senha' => md5($request->senha),
       'login' => $request->login,
       'adm' => 1,
@@ -186,7 +189,7 @@ class UserController extends Controller
 
   private function setarPlano($empresa, $plano){
     $dias = getenv("PLANO_AUTOMATICO_DIAS");
-    $exp = date('Y-m-d', strtotime("+$dias days",strtotime( 
+    $exp = date('Y-m-d', strtotime("+$dias days",strtotime(
       date('Y-m-d'))));
     $data = [
       'empresa_id' => $empresa->id,

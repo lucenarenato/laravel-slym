@@ -46,7 +46,7 @@
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="shortcut icon" href="/../../imgs/slym.png" />
-	
+
 	<script>
 		(function(h, o, t, j, a, r) {
 			h.hj = h.hj || function() {
@@ -72,7 +72,7 @@
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-		gtag('config', 'UA-37564768-1');
+		gtag('config', 'UA-109029815-1');
 	</script>
 
 
@@ -963,7 +963,7 @@
 										</li>
 
 										<li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-											
+
 											<a href="/cte" class="menu-link menu-">
 												<i class="menu-bullet menu-bullet-line">
 													<span>
@@ -1061,7 +1061,7 @@
 									<ul class="menu-nav">
 										@if(getenv('PEDIDO_LOCAL'))
 										<li class="menu-item menu-item-submenu menu-item-rel menu-item-active" data-menu-toggle="click" aria-haspopup="true">
-											
+
 											<a href="/pedidos" class="label label-xl label-inline label-light-primary">
 												Pedidos Mesa/Comanda: <strong id="pedidos-aberto">x0</strong>
 											</a>
@@ -1140,7 +1140,7 @@
 										@endif
 										<!--end::Title-->
 										<!--begin::Tabs-->
-										
+
 										<!--end::Tabs-->
 									</div>
 									<!--end::Header-->
@@ -1246,7 +1246,7 @@
 													</a>
 													<!--end::Symbol-->
 													<!--begin::Text-->
-													
+
 													<div class="d-flex flex-column font-weight-bold">
 														<a href="{{$a['link']}}" class="text-dark-75 text-hover-primary mb-1 font-size-lg">{{$a['titulo']}}</a>
 														<span class="text-muted">{{$a['msg']}}</span>
@@ -1258,31 +1258,31 @@
 												@endif
 												<!--end::Item-->
 												<!--begin::Item-->
-												
+
 												<!--end::Item-->
 												<!--begin::Item-->
-												
+
 												<!--end::Item-->
 												<!--begin::Item-->
-												
-												
+
+
 												<!--begin::Item-->
-												
+
 												<!--end::Item-->
 												<div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
 												<!--end::Scroll-->
 												<!--begin::Action-->
-												
+
 												<!--end::Action-->
 											</div>
 											<!--end::Tabpane-->
 											<!--begin::Tabpane-->
-											
+
 											<!--end::Tabpane-->
 											<!--begin::Tabpane-->
 											<div class="tab-pane" id="topbar_notifications_logs" role="tabpanel">
 												<!--begin::Nav-->
-												<div class="d-flex flex-center text-center text-muted min-h-200px">All caught up! 
+												<div class="d-flex flex-center text-center text-muted min-h-200px">All caught up!
 													<br>No new notifications.</div>
 													<!--end::Nav-->
 												</div>
@@ -1456,7 +1456,7 @@
 				<?php $path = getenv('PATH_URL') . "/"; ?>
 				<script type="text/javascript">
 					const path = "{{$path}}";
-					
+
 				</script>
 
 				@if(isset($pessoaFisicaOuJuridica))
@@ -1693,7 +1693,7 @@
 					jQuery(document).ready(function() {
 						KTSelect2.init();
 						$('.select2-selection__arrow').addClass('select2-selection__arroww')
-						
+
 						$('.select2-selection__arrow').removeClass('select2-selection__arrow')
 						$('.delivery-arrow').removeClass('select2-selection__arrow')
 						// $('.ki ki-arrow-up').addClass('la la-plus')
@@ -1841,7 +1841,7 @@
 							console.log("sessao expirada")
 						}
 
-						
+
 					})
 					.fail((err) => {
 						console.log("erro ao buscar pedidos em aberto")

@@ -42,7 +42,7 @@
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="shortcut icon" href="/../../imgs/slym.png" />
-	
+
 	<script>
 		(function(h, o, t, j, a, r) {
 			h.hj = h.hj || function() {
@@ -68,7 +68,7 @@
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-		gtag('config', 'UA-37564768-1');
+		gtag('config', 'UA-109029815-1');
 	</script>
 
 
@@ -101,7 +101,7 @@
 				<!--begin: Aside Container-->
 				<div class="d-flex flex-column-fluid flex-column justify-content-between py-12 col-12 py-lg-12 px-lg-35">
 					<!--begin::Logo-->
-					
+
 					<!--end::Logo-->
 					<!--begin::Aside body-->
 					<div class="d-flex flex-column-fluid flex-column" >
@@ -499,12 +499,12 @@
 
 					$.ajax({
 
-						url: 'https://www.receitaws.com.br/v1/cnpj/'+cnpj, 
-						type: 'GET', 
-						crossDomain: true, 
-						dataType: 'jsonp', 
-						success: function(data) 
-						{ 
+						url: 'https://www.receitaws.com.br/v1/cnpj/'+cnpj,
+						type: 'GET',
+						crossDomain: true,
+						dataType: 'jsonp',
+						success: function(data)
+						{
 							$('#consulta').removeClass('spinner');
 							console.log(data);
 							if(data.status == "ERROR"){
@@ -517,8 +517,8 @@
 
 							}
 
-						}, 
-						error: function(e) { 
+						},
+						error: function(e) {
 							$('#consulta').removeClass('spinner');
 							console.log(e)
 							swal("Alerta", "Nenhum retorno encontrado para este CNPJ, informe manualmente por gentileza", "warning")
